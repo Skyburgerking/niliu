@@ -35,6 +35,9 @@ No bytes written. Add --write to land candidate #1.
 
 ---
 
+> **Recommended:** drive it with an LLM agent using the bundled [skill](skill/). You state goals;
+> the engine finds, ranks and verifies the sites, then hands back a rollback command.
+
 ## 30 seconds
 
 ```bash
@@ -125,6 +128,7 @@ core/               engine (25 modules)
   exam.py           18-paper exam against PvZ ground truth
   replay.py         replay a known byte list
 rules/              rules.json (every threshold), presets.json (13 shapes)
+skill/              installable Agent Skill: SKILL.md (EN) + SKILL.zh-CN.md (ZH)
 docs/               usage, design, skill card, changelog
 examples/           three job files, edit the path and run
 tools/              guard.py (12 structural guards), survey.py (probe one exe)
@@ -146,7 +150,7 @@ Runtime paths are `var/` (backups, archives, caches) and `rules/`; nothing write
 | [docs/DESIGN.md](docs/DESIGN.md) | why the engine is built this way |
 | [docs/SKILL.md](docs/SKILL.md) | compact execution card for an LLM agent |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | measured capability changes |
-| [niliu-skill](https://github.com/Skyburgerking/niliu-skill) | installable Agent Skill (EN/ZH) for LLM-driven patching |
+| [skill/](skill/) | installable Agent Skill (EN/ZH): prerequisites, 22 ops, 10 gates |
 
 ---
 

@@ -30,6 +30,9 @@ python niliu.py change "E:/games/PlantsVsZombies.exe" 25 50
 
 ---
 
+> **推荐用法：** 由 LLM 代理加载仓库里的 [skill](skill/) 来驱动。你只说目标；
+> 引擎负责找站点、排序、验证，最后给你一条回滚命令。
+
 ## 30 秒上手
 
 ```bash
@@ -118,6 +121,7 @@ core/               引擎（25 个模块）
   exam.py           18 张卷的考试
   replay.py         按清单复刻
 rules/              rules.json（参数总闸）、presets.json（13 条形态）
+skill/              可安装的 Agent Skill：SKILL.md（英）+ SKILL.zh-CN.md（中）
 docs/               用法、设计、技能卡、变更记录
 examples/           三个 job 示例，改个路径就能跑
 tools/              guard.py（12 条守卫）、survey.py（单独摸底）
@@ -139,7 +143,7 @@ var/                运行产物（备份 / 档案 / 建图缓存），已进 .g
 | [docs/DESIGN.md](docs/DESIGN.md) | 为什么这么设计 |
 | [docs/SKILL.md](docs/SKILL.md) | 给 LLM 的精简执行卡 |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | 实测能力变化 |
-| [niliu-skill](https://github.com/Skyburgerking/niliu-skill) | 可直接安装的 Agent Skill（中英双语），给 LLM 驱动用 |
+| [skill/](skill/) | 可直接安装的 Agent Skill（中英双语）：前提、22 op、10 判据 |
 
 ---
 
