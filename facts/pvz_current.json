@@ -1,0 +1,765 @@
+{
+ "n": 152,
+ "ops": [
+  {
+   "file_off": 113080,
+   "orig": "19",
+   "new": "32"
+  },
+  {
+   "file_off": 165184,
+   "orig": "85c0",
+   "new": "d1e0"
+  },
+  {
+   "file_off": 165388,
+   "orig": "47",
+   "new": "90"
+  },
+  {
+   "file_off": 199152,
+   "orig": "19",
+   "new": "32"
+  },
+  {
+   "file_off": 207273,
+   "orig": "19",
+   "new": "32"
+  },
+  {
+   "file_off": 361821,
+   "orig": "19",
+   "new": "32"
+  },
+  {
+   "file_off": 564342,
+   "orig": "01",
+   "new": "04"
+  },
+  {
+   "file_off": 1189819,
+   "orig": "0e01",
+   "new": "1c02"
+  },
+  {
+   "file_off": 1190034,
+   "orig": "7201",
+   "new": "e402"
+  },
+  {
+   "file_off": 1190187,
+   "orig": "4c04",
+   "new": "9808"
+  },
+  {
+   "file_off": 1190217,
+   "orig": "4c04",
+   "new": "9808"
+  },
+  {
+   "file_off": 1190254,
+   "orig": "4605",
+   "new": "8c0a"
+  },
+  {
+   "file_off": 1190427,
+   "orig": "c201",
+   "new": "8403"
+  },
+  {
+   "file_off": 1190832,
+   "orig": "7805",
+   "new": "f00a"
+  },
+  {
+   "file_off": 1190895,
+   "orig": "64",
+   "new": "c8"
+  },
+  {
+   "file_off": 1191103,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1191268,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1191393,
+   "orig": "4605",
+   "new": "8c0a"
+  },
+  {
+   "file_off": 1191565,
+   "orig": "5203",
+   "new": "a406"
+  },
+  {
+   "file_off": 1191879,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1192249,
+   "orig": "2c01",
+   "new": "5802"
+  },
+  {
+   "file_off": 1192704,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1192829,
+   "orig": "9600",
+   "new": "2c01"
+  },
+  {
+   "file_off": 1193264,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1193388,
+   "orig": "46",
+   "new": "8c"
+  },
+  {
+   "file_off": 1194027,
+   "orig": "4c04",
+   "new": "9808"
+  },
+  {
+   "file_off": 1194333,
+   "orig": "9808",
+   "new": "3011"
+  },
+  {
+   "file_off": 1194631,
+   "orig": "f401",
+   "new": "e803"
+  },
+  {
+   "file_off": 1195302,
+   "orig": "b80b",
+   "new": "7017"
+  },
+  {
+   "file_off": 2593758,
+   "orig": "79",
+   "new": "59"
+  },
+  {
+   "file_off": 2594278,
+   "orig": "7f",
+   "new": "5f"
+  },
+  {
+   "file_off": 2594350,
+   "orig": "8f",
+   "new": "6f"
+  },
+  {
+   "file_off": 2594981,
+   "orig": "907a",
+   "new": "805a"
+  },
+  {
+   "file_off": 2749120,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2749124,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749132,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749156,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2749160,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749168,
+   "orig": "c409",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749192,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749196,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749228,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2749232,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749264,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2749268,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749300,
+   "orig": "af",
+   "new": "57"
+  },
+  {
+   "file_off": 2749304,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749312,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749336,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749340,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749372,
+   "orig": "c8",
+   "new": "64"
+  },
+  {
+   "file_off": 2749376,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749384,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749412,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749420,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749444,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2749448,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749456,
+   "orig": "c409",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749480,
+   "orig": "4b",
+   "new": "25"
+  },
+  {
+   "file_off": 2749484,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749492,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749516,
+   "orig": "4b",
+   "new": "25"
+  },
+  {
+   "file_off": 2749520,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749552,
+   "orig": "4b",
+   "new": "25"
+  },
+  {
+   "file_off": 2749556,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749588,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2749592,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749600,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749624,
+   "orig": "4b",
+   "new": "25"
+  },
+  {
+   "file_off": 2749628,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749660,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2749664,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749696,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2749700,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749732,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2749736,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749768,
+   "orig": "4501",
+   "new": "a200"
+  },
+  {
+   "file_off": 2749772,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749780,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2749804,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2749808,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749840,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2749844,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2749876,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2749880,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749912,
+   "orig": "af",
+   "new": "57"
+  },
+  {
+   "file_off": 2749916,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2749948,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2749952,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749988,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2749996,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750020,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2750024,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2750032,
+   "orig": "c409",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750056,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2750060,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750068,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750092,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2750096,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750128,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2750132,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750140,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750164,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2750168,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750176,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750200,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2750204,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2750236,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2750240,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750272,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2750276,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750284,
+   "orig": "2c01",
+   "new": "9600"
+  },
+  {
+   "file_off": 2750308,
+   "orig": "19",
+   "new": "0c"
+  },
+  {
+   "file_off": 2750312,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750344,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2750348,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750356,
+   "orig": "2c01",
+   "new": "9600"
+  },
+  {
+   "file_off": 2750380,
+   "orig": "4b",
+   "new": "25"
+  },
+  {
+   "file_off": 2750384,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750416,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2750420,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750452,
+   "orig": "64",
+   "new": "32"
+  },
+  {
+   "file_off": 2750456,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750488,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2750492,
+   "orig": "b80b",
+   "new": "ee02"
+  },
+  {
+   "file_off": 2750500,
+   "orig": "c409",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750524,
+   "orig": "2c01",
+   "new": "9600"
+  },
+  {
+   "file_off": 2750528,
+   "orig": "ee02",
+   "new": "bb00"
+  },
+  {
+   "file_off": 2750536,
+   "orig": "2c01",
+   "new": "9600"
+  },
+  {
+   "file_off": 2750560,
+   "orig": "fa",
+   "new": "7d"
+  },
+  {
+   "file_off": 2750564,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750572,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750596,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750600,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750608,
+   "orig": "c409",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750632,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750636,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750644,
+   "orig": "c8",
+   "new": "64"
+  },
+  {
+   "file_off": 2750668,
+   "orig": "e1",
+   "new": "70"
+  },
+  {
+   "file_off": 2750672,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750680,
+   "orig": "96",
+   "new": "4b"
+  },
+  {
+   "file_off": 2750704,
+   "orig": "c8",
+   "new": "64"
+  },
+  {
+   "file_off": 2750708,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750716,
+   "orig": "2c01",
+   "new": "9600"
+  },
+  {
+   "file_off": 2750740,
+   "orig": "32",
+   "new": "19"
+  },
+  {
+   "file_off": 2750744,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750776,
+   "orig": "7d",
+   "new": "3e"
+  },
+  {
+   "file_off": 2750780,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750812,
+   "orig": "f401",
+   "new": "fa00"
+  },
+  {
+   "file_off": 2750816,
+   "orig": "8813",
+   "new": "e204"
+  },
+  {
+   "file_off": 2750824,
+   "orig": "5802",
+   "new": "2c01"
+  },
+  {
+   "file_off": 2750852,
+   "orig": "ee02",
+   "new": "bb00"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "ops": [
+    {"op": "start", "exe": "D:/games/PlantsVsZombies.exe", "name": "cost_150_75", "from": 150, "to": 75, "width": 1},
+    {"op": "ask", "kind": "record", "top": 20},
+    {"op": "stop"}
+  ]
+}

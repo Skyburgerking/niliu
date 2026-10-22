@@ -1,0 +1,7 @@
+{
+  "ops": [
+    {"op": "start", "exe": "D:/games/PlantsVsZombies.exe", "name": "cooldown_400_100", "from": 121, "to": 89, "width": 1},
+    {"op": "ask", "kind": "typed", "top": 8},
+    {"op": "stop"}
+  ]
+}

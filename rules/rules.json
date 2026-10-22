@@ -1,0 +1,117 @@
+{
+ "_说明": "新逆流 · 判据与数值的唯一事实源头。代码里不许再抄一份阈值 —— 改这里，不改代码。",
+ "version": 1,
+ "record": {
+  "_说明": "认表判据（record_table.py）。三个 use_* 只给消融实验用，产线恒为 true。",
+  "min_gcd": 2,
+  "min_ratio": 0.9,
+  "min_lift": 5.0,
+  "strong_votes": 3,
+  "max_sites": 64,
+  "table_min_len": 4,
+  "table_strides": [
+   8,
+   12,
+   16,
+   20,
+   24,
+   28,
+   32,
+   36,
+   40,
+   44,
+   48,
+   52,
+   56,
+   60,
+   64
+  ],
+  "filler_run": 3
+ },
+ "arm": {
+  "_说明": "分档判据（hunt.gate_arm）：GATE_MIN 是过门线，acc_* 是纯生产者/累加器的加减分",
+  "gate_min": 10.0,
+  "acc_pure_bonus": 1.5,
+  "acc_derived_penalty": 3.0,
+  "acc_ahead": 20,
+  "acc_back": 60
+ },
+ "class": {
+  "_说明": "类别判定：代码答案至少几处才压得过表答案（研究 e12 的实测）",
+  "code_min_sites": 3
+ },
+ "geda": {
+  "_说明": "技术权重的先验与自学习参数（vov 同款）。先验别给太大，会压住学习信号。",
+  "prior": 4,
+  "reward_gain": 10,
+  "dyn_min": -50,
+  "dyn_max": 1000,
+  "boost_hit": 5,
+  "boost_miss": 2,
+  "boost_max": 100,
+  "step_max": 8,
+  "stall_threshold": 40,
+  "doubt_threshold": 200,
+  "hot_reward": 1.0,
+  "exp_reward": 0.8,
+  "hot_cap": 8,
+  "exp_cap": 60,
+  "hot_pick_p": 0.5,
+  "reward_hit_new": 1.0,
+  "reward_hit": 0.3,
+  "reward_miss": -0.5,
+  "reward_top_k": 3
+ },
+ "windows": [
+  24,
+  32,
+  48,
+  64,
+  96
+ ],
+ "rounds": 6,
+ "seed": 20261017,
+ "exam_top": 30,
+ "guards": {
+  "_说明": "结构守卫自检的边界（工具/守卫.py）",
+  "big_file_lines": 700,
+  "min_organs": 5,
+  "forbidden_dirs": [
+   "cygwin64"
+  ]
+ },
+ "_说明_hot": "hot_reward 设 1.0：'换出更多处'那一发(1.0)就该进热点基因，否则永远不会有金种子",
+ "tree": {
+  "boost": 0.0,
+  "max_depth": 3,
+  "min_samples": 8,
+  "_说明": "boost=0 = 树只观察不发言（默认）。判定树替 _pick_class 的'≥3处'拍脑袋，先量再说。"
+ },
+ "gates_order": [
+  "record",
+  "imm",
+  "arm",
+  "typed",
+  "f32"
+ ],
+ "typed": {
+  "gate_min": 10.0,
+  "_说明": "类型化常量判据（typed.py）：f64 的某几个字节被改。scanmem 的 value_t 思路"
+ },
+ "generality": {
+  "min_hits": 4,
+  "_说明": "验收/通用性.py 的及格线（合成靶子 2 位 x 3 类）。提了就把这个数提上去，不许降。"
+ },
+ "presets": {
+  "min_ready": 4,
+  "_说明": "预设库里 status=ok 的条数下限（守卫12）。新形态上线就加，不许降。"
+ },
+ "f32": {
+  "gate_min": 10.0,
+  "_说明": "f32 常量判据（typed32.py）：4 字节 float 的某一个字节被改，补 typed 只做 f64 的缺口"
+ },
+ "imm": {
+  "_说明": "字段写入门（field_imm.py）：mov [对象+偏移], imm",
+  "gate_min": 10.0
+ }
+}

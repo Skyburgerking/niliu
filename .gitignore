@@ -1,0 +1,21 @@
+# runtime output (backups, archives, map caches)
+var/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# work dirs
+tests/work/
+tests/bin/*.exe.tmp
+
+# local junk
+*.bak
+*.pkl
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

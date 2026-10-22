@@ -1,0 +1,7 @@
+{
+  "ops": [
+    {"op": "start", "exe": "D:/games/PlantsVsZombies.exe", "name": "sun_25_50", "from": 25, "to": 50, "width": 4},
+    {"op": "ask", "kind": "auto", "top": 8},
+    {"op": "stop"}
+  ]
+}

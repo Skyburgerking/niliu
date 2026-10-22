@@ -1,0 +1,206 @@
+{
+  "_说明": "汇编形态预设库：每一种『这次要改的东西长什么样』配一条应对。摸底 → 选预设 → 引擎按预设打。status: ok=已上线 / partial=能用但有前提 / todo=已知缺口（写清楚为什么还没做） ｜ 探测阈值一律取『形态存在』的量级，不取 PvZ 的绝对计数（小二进制不该被判死）",
+  "version": 2,
+  "presets": [
+    {
+      "id": "cmp_chain_switch",
+      "名字": "分档 iff 链（cmp reg, k 链 + 分支手臂）",
+      "典型编译器": "MSVC VS2003~VS2015（32 位）、部分手写汇编",
+      "detect": {
+        "field": "cmp_imm",
+        "min": 50
+      },
+      "response": {
+        "gate": "arm",
+        "window": 48,
+        "extra": "累加器判别（纯生产者 vs 搭在总量上）"
+      },
+      "status": "ok",
+      "实测": "PvZ 20423 处；25→50 精确率 1.00"
+    },
+    {
+      "id": "jump_table_switch",
+      "名字": "跳表分派（变址取表项 → jmp reg）",
+      "典型编译器": "gcc / clang / MSVC 2015+（-O2）",
+      "detect": {
+        "field": "jt",
+        "min": 1
+      },
+      "response": {
+        "gate": "jt",
+        "extra": "读表项 → 每 case 块收 mov reg, imm 当档位族"
+      },
+      "status": "todo",
+      "缺口": "gate_jt 未实现；合成靶场 分档 2 个考点就是挂在这（gcc 把它编成 lea rdx,[rip+x]; movsxd rax,[rdx+rax*4]; add; jmp rax）"
+    },
+    {
+      "id": "vtable_dispatch",
+      "名字": "虚调用（mov reg,[obj+disp]; jmp reg）",
+      "典型编译器": "所有 C++ 编译器",
+      "detect": {
+        "field": "jmp_reg",
+        "min": 1
+      },
+      "response": {
+        "gate": "prov",
+        "extra": "vtable 槽位 → 方法 → 字段消费者（对象身份的入口）"
+      },
+      "status": "todo",
+      "缺口": "prov（对象身份）未做；PvZ 55 处全是虚调用，不是 switch 跳表"
+    },
+    {
+      "id": "name_anchor_table",
+      "名字": "名字锚定结构表（指针 + ASCII 标识符 + 固定步长）",
+      "detect": {
+        "field": "tables",
+        "min": 1
+      },
+      "response": {
+        "organ": "record",
+        "extra": "同列 ≥3 份 + 公因数 + 非占位 + 孤证让位"
+      },
+      "status": "ok",
+      "实测": "PvZ 23 张表；10 张表卷精确率 1.00；合成靶子 2/2"
+    },
+    {
+      "id": "pointer_stride_loop",
+      "名字": "指针推进式遍历（add reg, stride）而不是 base+n*stride",
+      "典型编译器": "gcc / clang",
+      "detect": {
+        "field": "scaled",
+        "min": 0,
+        "note": "由 record 器官自己认，不单独探"
+      },
+      "response": {
+        "organ": "record",
+        "extra": "值列前后两个方向都试"
+      },
+      "status": "ok",
+      "实测": "gcc 靶子表列 2/2 命中"
+    },
+    {
+      "id": "field_write_init",
+      "名字": "对象初始化串（同一基址连续 mov [obj+disp], imm）",
+      "detect": {
+        "field": "field_w",
+        "min": 100
+      },
+      "response": {
+        "organ": "field",
+        "extra": "需要『谁消费这个字段』的证据才能上锁"
+      },
+      "status": "todo",
+      "缺口": "e14/e16 两次实测微精确 0.03~0.06，会毒死表卷；卡在对象身份（(对象,disp) 而非 disp）"
+    },
+    {
+      "id": "float64_const",
+      "名字": "f64 常量（.rdata 里 8 字节 double，被 movsd/fld 引用）",
+      "detect": {
+        "field": "float_ops",
+        "min": 10
+      },
+      "response": {
+        "organ": "typed",
+        "extra": "像样的 f64 + 逐字节替换 + 独立回读 + 镜像对留正"
+      },
+      "status": "ok",
+      "实测": "PvZ 三张字节级卷子精确率 1.00；合成靶子 2/2"
+    },
+    {
+      "id": "float32_const",
+      "名字": "f32 常量（4 字节 float）",
+      "detect": {
+        "field": "float_ops",
+        "min": 10
+      },
+      "response": {
+        "organ": "typed",
+        "extra": "typed 现在只扫 f64，f32 要加"
+      },
+      "status": "todo",
+      "缺口": "typed.SECTIONS/FMT 写死 <d；加 <f 与 i32/i16 是同一处改动（scanmem 的 value_t 思路）"
+    },
+    {
+      "id": "int_width_variants",
+      "名字": "其他整数宽度（i32/i16/i8，含无符号）",
+      "detect": {
+        "field": "field_w",
+        "min": 100
+      },
+      "response": {
+        "organ": "typed",
+        "extra": "同一窗口多宽度解释"
+      },
+      "status": "todo",
+      "缺口": "同上：typed 目前只做 f64"
+    },
+    {
+      "id": "string_hash_switch",
+      "名字": "字符串哈希分派（imul/xor 算 hash 再 switch）",
+      "detect": {
+        "field": "imul_imm",
+        "min": 20
+      },
+      "response": {
+        "gate": "jt",
+        "extra": "先认 hash 常量（imul imm），再接到跳表"
+      },
+      "status": "todo",
+      "缺口": "未做；多见于脚本绑定/命令表（判据要认 imul 常数 → 跳表）"
+    },
+    {
+      "id": "il2cpp_metadata",
+      "名字": "Unity IL2CPP（global-metadata.dat + il2cpp_init）",
+      "detect": {
+        "field": "strings",
+        "min": 1,
+        "match": [
+          "il2cpp",
+          "global-metadata"
+        ]
+      },
+      "response": {
+        "organ": "il2cpp",
+        "extra": "读 metadata → 类/字段/方法偏移，不再靠猜"
+      },
+      "status": "todo",
+      "缺口": "未做；这是 Unity 游戏的主力路径（另有 apk-memory-goldfinger 的安卓路线）"
+    },
+    {
+      "id": "mono_assembly",
+      "名字": "Unity Mono / .NET（mscoree.dll + CLR 头）",
+      "detect": {
+        "field": "imports",
+        "min": 1,
+        "match": [
+          "mscoree.dll",
+          "mono"
+        ]
+      },
+      "response": {
+        "organ": "il",
+        "extra": "读 Assembly-CSharp.dll 的 IL（dnfile/dncil）"
+      },
+      "status": "todo",
+      "缺口": "未做；技能卡里已有打法，引擎还没接"
+    },
+    {
+      "id": "arm64_native",
+      "name_en": "aarch64 native (ELF)",
+      "名字": "ARM64 原生（ELF，安卓 .so）",
+      "detect": {
+        "field": "machine",
+        "min": 1,
+        "match": [
+          "elf64-aarch64"
+        ]
+      },
+      "response": {
+        "organ": "arm",
+        "extra": "capstone ARM64：ldr/str [xN,#imm]、adrp+add 取址、b/br 分派"
+      },
+      "status": "todo",
+      "缺口": "map.py 目前只认 PE 与 x86/x64；ARM64 解码要新开一条路"
+    }
+  ]
+}
