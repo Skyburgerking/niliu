@@ -183,6 +183,6 @@ These are floors, not a graduation. The graduation line is exam 18/18 **and** ge
 
 ## License
 
-No license file yet. Ask the author before redistributing.
+MIT — see [LICENSE](LICENSE). Free to use, modify, redistribute and sell, with attribution.
 
 > **One line:** state `from -> to`, get evidence-backed sites, land one, get a verified patch and a rollback.

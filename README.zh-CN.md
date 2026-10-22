@@ -177,6 +177,6 @@ python tests/generality.py         # 合成 C 靶场（需要 gcc 与 x86_64-w64
 
 ## 许可
 
-暂无 License，转载前先问作者。
+MIT，见 [LICENSE](LICENSE)。可自由使用、修改、再分发、商用，保留版权声明即可。
 
 > **一句话：** 你给 `from → to`，它给几处带证据的站点；你落一处，它备份 + 回读 + 给回滚。
