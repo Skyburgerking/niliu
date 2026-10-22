@@ -139,6 +139,7 @@ var/                运行产物（备份 / 档案 / 建图缓存），已进 .g
 | [docs/DESIGN.md](docs/DESIGN.md) | 为什么这么设计 |
 | [docs/SKILL.md](docs/SKILL.md) | 给 LLM 的精简执行卡 |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | 实测能力变化 |
+| [niliu-skill](https://github.com/Skyburgerking/niliu-skill) | 可直接安装的 Agent Skill（中英双语），给 LLM 驱动用 |
 
 ---
 

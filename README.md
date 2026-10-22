@@ -146,6 +146,7 @@ Runtime paths are `var/` (backups, archives, caches) and `rules/`; nothing write
 | [docs/DESIGN.md](docs/DESIGN.md) | why the engine is built this way |
 | [docs/SKILL.md](docs/SKILL.md) | compact execution card for an LLM agent |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | measured capability changes |
+| [niliu-skill](https://github.com/Skyburgerking/niliu-skill) | installable Agent Skill (EN/ZH) for LLM-driven patching |
 
 ---
 
